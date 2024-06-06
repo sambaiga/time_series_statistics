@@ -16,7 +16,7 @@ class CorrelationAnalyzer:
     """
 
     @staticmethod
-    def corr(data, variable_col, target_col, method='scatter', ties='auto', hue_col=None):
+    def corr(data, variable_col, target_col, method='scatter', ties='auto', hue_col=None, n_sample=None):
         """
         Calculate the specified correlation measure between the target column and other variables.
 
@@ -47,7 +47,7 @@ class CorrelationAnalyzer:
             If an unsupported method is provided.
         """
         if method=='scatter':
-            return scatter_plot(data, variable_col, target_col, hue_col)
+            return scatter_plot(data, variable_col, target_col, hue_col, n_sample=n_sample)
         elif method in [ 'pearson', 'kendall', 'spearman']:
             return CorrelationAnalyzer._get_correlation(data, variable_col, target_col)
         elif method == 'ppscore':

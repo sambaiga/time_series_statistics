@@ -17,6 +17,7 @@ matplotlib = ">=3.8.4"
 matplotlib_inline = ">=0.1.6"
 seaborn = ">=0.13.2"
 statsmodels = ">=0.14.0"
+vl-convert-python=">1.4.0"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "2.14.0"
